@@ -6,7 +6,7 @@ PY_ENV="/home/workspace/environment/notebook_py_env"
 conda create -y -p $PY_ENV -c conda-forge python=3.9 \
     ipykernel \
     scanpy anndata h5py \
-    numpy pandas \
+    numpy pandas glob \
     matplotlib seaborn \
     dill \
 
