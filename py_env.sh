@@ -5,7 +5,7 @@ PY_ENV="/home/workspace/environment/notebook_py_env"
 # Create conda environment with Python and R packages
 conda create -y -p $PY_ENV -c conda-forge python=3.9 \
     ipykernel \
-    scanpy anndata h5py \
+    scanpy anndata h5py python-igraph scikit-learn scipy \
     numpy pandas \
     matplotlib seaborn \
     dill \

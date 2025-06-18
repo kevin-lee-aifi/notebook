@@ -52,7 +52,14 @@ fi
 
 # Create the dataset-specific subfolder within data
 FULL_DATA_PATH="$DATA_BASE/$DATASET_DIR"
-echo "✓ Creating dataset folder: $FULL_DATA_PATH"
+
+# Remove existing folder if it exists and create fresh directory
+if [ -d "$FULL_DATA_PATH" ]; then
+    echo "✓ Removing existing dataset folder: $FULL_DATA_PATH"
+    rm -rf "$FULL_DATA_PATH"
+fi
+
+echo "✓ Creating fresh dataset folder: $FULL_DATA_PATH"
 mkdir -p "$FULL_DATA_PATH"
 cd "$FULL_DATA_PATH"
 
